@@ -6,13 +6,17 @@ using UnityEngine;
 public class EnemyIA : MonoBehaviour
 {
     
-    public GameObject player;
+    private GameObject player;
 
-    [SerializeField] private float speed = 5;
+    
+    [Header("Movimiento")]
+    public float speed = 5;
+    public float distanceToMoveForward = 4;
+    public float distanceToMoveBackward = 3;
+    
+    [Header("Disparo")]
+    public float shootDistance = 10;
     private EnemyFire enemyFire;
-    [SerializeField] private float distanceToMoveForward = 4;
-    [SerializeField] private float distanceToMoveBackward = 3;
-    [SerializeField] private float shootDistance = 10;
     
     // Start is called before the first frame update
 
@@ -59,11 +63,7 @@ public class EnemyIA : MonoBehaviour
             transform.Translate(Vector3.back * speed *Time.deltaTime);
 
         }
-
-
-
     }
-
     /// <summary>
     /// Si está a distancia de tiro dispara
     /// </summary>

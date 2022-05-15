@@ -7,10 +7,7 @@ public class BombProyectile : MonoBehaviour
 {
 
     private Rigidbody rg;
-
-
-    [SerializeField] private float forceValue;
-    // Start is called before the first frame update
+    public float forceValue;
 
     private void Awake()
     {
@@ -20,7 +17,7 @@ public class BombProyectile : MonoBehaviour
     private void Start()
     {
         rg.AddRelativeForce(new Vector3(0,0.5f,1.5f) *forceValue ); //La bomba va tener un tiro parabólico y para
-        // le añadimos una fuerza 
+        // ello le añadimos una fuerza 
         Destroy(gameObject, 3);
     }
 }

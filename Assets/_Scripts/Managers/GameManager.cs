@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     public int enemyDestroyed = 0;
     public GameObject gameOverPanel;
     public GameObject gameWinPanel;
-
-    
     
     private void Awake()
     {
@@ -52,11 +50,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void EnemySelected(GameObject enemy)
-    {
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Volvemos a carga la misma escena en la que estamos
     }
 }

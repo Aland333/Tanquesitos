@@ -7,11 +7,9 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-     [SerializeField] private Image healthBar;
-     [SerializeField] private float MaxHP;
+     public Image healthBar;
+     public float MaxHP;
      public float currentHP;
-
-
 
      private void Start()
      {

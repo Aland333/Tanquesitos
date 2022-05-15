@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    [SerializeField] private float speed;
-    [SerializeField] private float rotationSpeed;
+    public float speed;
+    public float rotationSpeed;
     private Ray ray;
     private RaycastHit hit;
     public LayerMask layerObject;
@@ -47,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
     private void autoAim()
     {
 
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition); //Obtenemos un rayo que sale de la cámara hasta
+        //la posición del ratón en el juego
         if (Physics.Raycast(ray, out hit, 100,  layerObject )) 
         {
             transform.DOLookAt(hit.collider.transform.position, 1);

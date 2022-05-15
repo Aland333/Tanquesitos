@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour
 {
 
-    [SerializeField] private Image healthBar;
-    [SerializeField] private float maxHP;
-    [SerializeField] private float currentHP;
-    public Image canvasHealthBar;
+    public Image healthBar;
+    public float maxHP;
+    public float currentHP;
+    private Image canvasHealthBar;
     public bool isSelected = false; //Para indicar controlar si el jugador ha seleccionado este tanque
     // haciendo click derecho
 
